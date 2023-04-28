@@ -12,7 +12,8 @@
                 {
                     url: 'now',
                     success: function(response){
-                        alert(response)
+                        // alert(response['time'])
+                        var elem = $("#abc").val(response['time']);
                     }
                 }
 
@@ -21,6 +22,6 @@
     </script>
 </head>
 <body>
-    <input type="button" value="Fetch Time" onclick="get_time()">
+    <input type="button" value="Fetch Time" id="abc" onclick="get_time()">
 </body>
 </html>
